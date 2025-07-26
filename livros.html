@@ -1,0 +1,76 @@
+<section id="livros">
+  <h2>Livros sobre o caso BTK</h2>
+
+  <div class="livro-card">
+    <img src="download (2).jpg" alt="Capa do livro Confession of a Serial Killer" />
+    <div class="livro-info">
+      <h3>Confession of a Serial Killer</h3>
+      <p><strong>Autora:</strong> Katherine Ramsland</p>
+      <p>Com acesso direto a Dennis Rader, a autora explora as profundezas da mente do assassino, revelando sua infância perturbada, as fantasias que o impulsionavam e o seu desejo de reconhecimento.</p>
+    </div>
+  </div>
+
+  <div class="livro-card">
+    <img src="download.png" alt="Capa do livro Bind, Torture, Kill: The Inside Story" />
+    <div class="livro-info">
+      <h3>Bind, Torture, Kill: The Inside Story</h3>
+      <p><strong>Autores:</strong> Roy Wenzl, Tim Potter, Hurst Laviana e L. Kelly</p>
+      <p>Relato jornalístico completo sobre os crimes, a investigação e a captura de Dennis Rader. Escrito por jornalistas que acompanharam o caso de perto.</p>
+    </div>
+  </div>
+</section>
+
+<style>
+#livros {
+  background-color: #000;
+  color: #fff;
+  padding: 40px 20px;
+  font-family: 'Courier New', monospace;
+}
+
+#livros h2 {
+  color: #e50914;
+  font-size: 28px;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.livro-card {
+  display: flex;
+  gap: 20px;
+  background-color: #111;
+  padding: 20px;
+  margin-bottom: 30px;
+  border-radius: 8px;
+  align-items: flex-start;
+}
+
+.livro-card img {
+  width: 150px;
+  height: auto;
+  border-radius: 4px;
+  object-fit: cover;
+}
+
+.livro-info h3 {
+  color: #e50914;
+  margin-top: 0;
+}
+
+.livro-info p {
+  margin: 5px 0;
+  color: #ccc;
+}
+
+@media (max-width: 768px) {
+  .livro-card {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .livro-card img {
+    margin-bottom: 15px;
+  }
+}
+</style>

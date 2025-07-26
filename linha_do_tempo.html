@@ -1,0 +1,115 @@
+<section id="linha-do-tempo" class="timeline">
+  <h2>Linha do Tempo</h2>
+
+  <div class="timeline-container">
+    <div class="timeline-line"></div>
+
+    <div class="timeline-item left">
+      <div class="content">
+        <h3>1974</h3>
+        <p>Primeiro assassinato cometido por BTK: <a href="img/familia-otero.png" target="_blank">família Otero</a> é brutalmente assassinada.</p>
+      </div>
+    </div>
+
+    <div class="timeline-item right">
+      <div class="content">
+        <h3>1978</h3>
+        <p>Rader envia uma carta à polícia exigindo reconhecimento.</p>
+      </div>
+    </div>
+
+    <div class="timeline-item left">
+      <div class="content">
+        <h3>1985</h3>
+        <p>BTK mata <a href="img/marine-hedge.png" target="_blank">Marine Hedge</a>, uma vizinha.</p>
+      </div>
+    </div>
+
+    <div class="timeline-item right">
+      <div class="content">
+        <h3>2004</h3>
+        <p>Após anos de silêncio, BTK volta a se comunicar, levando à sua captura.</p>
+      </div>
+    </div>
+
+    <div class="timeline-item left">
+      <div class="content">
+        <h3>2005</h3>
+        <p>Dennis Rader é condenado a 10 prisões perpétuas.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .timeline {
+    background-color: #000;
+    color: #fff;
+    padding: 50px 20px;
+    font-family: 'Courier New', monospace;
+  }
+  .timeline h2 {
+    color: #e50914;
+    font-size: 28px;
+    margin-bottom: 30px;
+    text-align: center;
+  }
+  .timeline-container {
+    position: relative;
+    max-width: 1000px;
+    margin: auto;
+  }
+  .timeline-line {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    bottom: 0;
+    width: 4px;
+    background-color: red;
+    transform: translateX(-50%);
+    z-index: 1;
+  }
+  .timeline-item {
+    padding: 20px 30px;
+    position: relative;
+    width: 50%;
+  }
+  .timeline-item .content {
+    background: #111;
+    padding: 20px;
+    border-left: 3px solid #e50914;
+    border-radius: 5px;
+    position: relative;
+    z-index: 2;
+  }
+  .timeline-item.left {
+    left: 0;
+    text-align: right;
+  }
+  .timeline-item.right {
+    left: 50%;
+    text-align: left;
+  }
+  .timeline-item h3 {
+    margin-top: 0;
+    color: #fff;
+  }
+  .timeline-item a {
+    color: #fff;
+    text-decoration: underline;
+  }
+  .timeline-item a:hover {
+    color: #e50914;
+  }
+  @media (max-width: 768px) {
+    .timeline-item {
+      width: 100%;
+      left: 0 !important;
+      text-align: left !important;
+      padding: 20px 10px;
+    }
+    .timeline-line {
+      left: 20px;
+    }
+  }
+</style>
