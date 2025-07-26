@@ -1,3 +1,11 @@
+<nav class="nav-menu" role="navigation" aria-label="Menu de navegação">
+  <a href="index.html">Resumo</a>
+  <a href="historia_btk.html">História</a>
+  <a href="linha_do_tempo_crimes.html">Linha do Tempo</a>
+  <a href="vitimas_btk.html">Vítimas</a>
+  <a href="referencias_btk.html">Referências</a>
+</nav>
+
 <section id="historia" class="historia section">
   <h2>História</h2>
 
@@ -18,6 +26,8 @@
   <p>Rader foi membro da Igreja Luterana de Cristo e chegou a ser eleito presidente do conselho de sua congregação. Também foi líder dos escoteiros mirins do Kansas.</p>
 
   <p>Em 26 de julho de 2005, após sua prisão, sua esposa solicitou e obteve na justiça um “divórcio de emergência”, que excluiu o período normal de espera e agilizou o processo.</p>
+
+  <p><a href="index.html" class="btn-voltar">← Voltar ao início</a></p>
 </section>
 
 <style>
@@ -42,6 +52,22 @@
   }
   .historia.section strong {
     color: #e50914;
+  }
+  .btn-voltar {
+    display: inline-block;
+    margin-top: 30px;
+    color: #e50914;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 16px;
+    border: 1px solid #e50914;
+    padding: 8px 14px;
+    border-radius: 4px;
+    transition: background 0.3s;
+  }
+  .btn-voltar:hover {
+    background-color: #e50914;
+    color: #000;
   }
   @media (max-width: 768px) {
     .historia.section {
