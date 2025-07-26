@@ -24,13 +24,12 @@
     body {
       margin: 0;
       background-color: var(--bg);
-      background-image: url('https://www.transparenttextures.com/patterns/concrete-wall.png'); /* textura leve */
+      background-image: url('https://www.transparenttextures.com/patterns/concrete-wall.png');
       color: var(--fg);
       font-family: 'Special Elite', monospace;
       line-height: var(--line-height);
     }
 
-    /* Acessibilidade: skip link */
     .skip-link {
       position: absolute;
       left: -9999px;
@@ -49,9 +48,8 @@
       z-index: 1000;
     }
 
-    /* Cabeçalho com imagem de fundo */
     .header-btk {
-      background-image: url('https://i.imgur.com/Bf5fAew.jpg'); /* troque por btk-mask.jpg se preferir local */
+      background-image: url('OIP.jpg');
       background-size: cover;
       background-position: center;
       min-height: 320px;
@@ -93,14 +91,28 @@
       letter-spacing: .05em;
     }
 
-    /* Container padrão */
+    .nav-menu {
+      background: var(--surface);
+      padding: 1rem;
+      text-align: center;
+      border-bottom: 1px solid var(--border);
+    }
+    .nav-menu a {
+      color: var(--accent);
+      margin: 0 1rem;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .nav-menu a:hover {
+      text-decoration: underline;
+    }
+
     .container {
       max-width: var(--max-width);
       margin: 0 auto;
       padding: 2rem 1rem 3rem;
     }
 
-    /* Seções */
     section {
       border-left: 4px solid var(--accent);
       padding-left: 1rem;
@@ -116,7 +128,6 @@
     a { color: var(--accent); }
     a:hover { text-decoration: underline; }
 
-    /* Citação de impacto */
     .citacao-impactante {
       background: var(--surface);
       border-left: 4px solid var(--accent);
@@ -126,13 +137,11 @@
       color: #ccc;
     }
 
-    /* Foco visível */
     a:focus-visible, button:focus-visible, [tabindex]:focus-visible {
       outline: 3px solid var(--accent);
       outline-offset: 2px;
     }
 
-    /* Reduz animações para quem prefere */
     @media (prefers-reduced-motion: reduce) {
       html { scroll-behavior: auto; }
       * {
@@ -154,12 +163,18 @@
     </div>
   </header>
 
+  <nav class="nav-menu" role="navigation" aria-label="Menu de navegação">
+    <a href="index.html">Resumo</a>
+    <a href="historia.html">História</a>
+    <a href="linha_do_tempo.html">Linha do Tempo</a>
+    <a href="vitimas.html">Vítimas</a>
+    <a href="referencias.html">Referências</a>
+  </nav>
+
   <main id="conteudo" role="main" class="container" aria-labelledby="titulo-principal">
-    <!-- Coloquei um resumo placeholder só pra você ver a base. As próximas partes entram aqui. -->
     <section id="resumo" aria-labelledby="resumo-titulo">
       <h2 id="resumo-titulo">Resumo</h2>
       <p>Este site reúne informações sobre <strong>Dennis Rader</strong>, também conhecido como <strong>BTK</strong> — um dos serial killers mais perturbadores da história dos EUA. O objetivo é recriar uma página ao estilo Wikipédia, com foco em acessibilidade.</p>
-
       <blockquote class="citacao-impactante">
         "Bind, Torture, Kill" — o lema que ele próprio usou para se descrever.
       </blockquote>
