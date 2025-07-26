@@ -168,4 +168,14 @@
     <a href="index.html">Voltar para o início</a>
   </div>
 </body>
+</style>
+<script>
+  // Botão voltar ao topo
+  document.querySelectorAll('.btn-topo').forEach(function(btn) {
+    btn.addEventListener('click', function(e) {
+      e.preventDefault();
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  });
+</script>
 </html>

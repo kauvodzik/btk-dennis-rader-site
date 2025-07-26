@@ -12,7 +12,7 @@
     }
 
     #referencias {
-      background-image: url('https://img.freepik.com/fotos-gratis/renderizacao-3d-de-uma-fita-de-cena-de-crime-contra-um-fundo-defocussed_1048-6111.jpg?semt=ais_hybrid&w=740'); /* imagem em alta qualidade */
+      background-image: url('https://img.freepik.com/fotos-gratis/renderizacao-3d-de-uma-fita-de-cena-de-crime-contra-um-fundo-defocussed_1048-6111.jpg?semt=ais_hybrid&w=740');
       background-size: cover;
       background-position: center;
       background-repeat: no-repeat;
@@ -44,6 +44,24 @@
       color: red;
       margin-bottom: 20px;
     }
+
+    .btn-voltar {
+      display: inline-block;
+      margin-top: 30px;
+      color: #e50914;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 16px;
+      border: 1px solid #e50914;
+      padding: 8px 14px;
+      border-radius: 4px;
+      transition: background 0.3s;
+    }
+
+    .btn-voltar:hover {
+      background-color: #e50914;
+      color: #000;
+    }
   </style>
 </head>
 <body>
@@ -54,8 +72,20 @@
       <p>Wikipedia – <a href="#">Dennis Rader</a></p>
       <p>Livro: <em>Confession of a Serial Killer</em>, Katherine Ramsland</p>
       <p>Livro: <em>Bind, Torture, Kill: The Inside Story</em>, Roy Wenzl, Tim Potter, Hurst Laviana e L. Kelly</p>
+      <p><a href="index.html" class="btn-voltar">← Voltar ao início</a></p>
     </div>
   </section>
 
 </body>
+</style>
+
+<script>
+  // Botão voltar ao topo
+  document.querySelectorAll('.btn-topo').forEach(function(btn) {
+    btn.addEventListener('click', function(e) {
+      e.preventDefault();
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  });
+</script>
 </html>

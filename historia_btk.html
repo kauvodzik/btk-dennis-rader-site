@@ -11,7 +11,7 @@
 
   <p><strong>Dennis Lynn Rader</strong> nasceu em 9 de março de 1945, filho de Dorothea Mae Rader (nascida Cook) e William Elvin Rader, sendo um de quatro filhos. Seus irmãos eram Paul, Bill e Jeff Rader. Nascido em Pittsburg, Kansas, ele cresceu na cidade de Wichita. Seus pais trabalhavam muito e prestavam pouca atenção aos filhos em casa; Rader, mais tarde, lembraria com especificidade o sentimento de ser ignorado por sua mãe e o ressentimento que isso gerou.</p>
 
-  <p>Desde muito jovem, Rader nutria várias fantasias sexuais sádicas que envolviam torturar mulheres “presas e indefesas”. Ele também mostrava sinais de zoossadismo ao torturar, matar e enforcar pequenos animais. Rader buscava satisfazer seus fetiches sexuais por voyeurismo, asfixia autoerótica e cross‑dressing; costumava espionar vizinhas enquanto se vestia com roupas de mulher — incluindo peças íntimas femininas que havia roubado — e então se masturbava com cordas ou outras amarras nos braços e pescoço.</p>
+  <p>Desde muito jovem, Rader nutria várias fantasias sexuais sádicas que envolviam torturar mulheres “presas e indefesas”. Ele também mostrava sinais de zoossadismo ao torturar, matar e enforcar pequenos animais. Rader buscava satisfazer seus fetiches sexuais por voyeurismo, asfixia autoerótica e cross​‑dressing; costumava espionar vizinhas enquanto se vestia com roupas de mulher — incluindo peças íntimas femininas que havia roubado — e então se masturbava com cordas ou outras amarras nos braços e pescoço.</p>
 
   <p>Anos mais tarde, durante um período de pausa nos assassinatos, Rader tiraria fotos de si mesmo vestido com roupas de mulher e usando uma máscara feminina, enquanto estava amarrado. Ele admitiria posteriormente que fingia ser suas vítimas como parte de uma fantasia sexual. Apesar de tudo, manteve essas inclinações bem escondidas e era amplamente considerado em sua comunidade como “normal”, “cortês” e “educado”.</p>
 
@@ -27,7 +27,7 @@
 
   <p>Em 26 de julho de 2005, após sua prisão, sua esposa solicitou e obteve na justiça um “divórcio de emergência”, que excluiu o período normal de espera e agilizou o processo.</p>
 
-  <p><a href="index.html" class="btn-voltar">← Voltar ao início</a></p>
+  <p><a href="#" class="btn-topo">Voltar ao topo</a></p>
 </section>
 
 <style>
@@ -53,7 +53,8 @@
   .historia.section strong {
     color: #e50914;
   }
-  .btn-voltar {
+  .btn-voltar,
+  .btn-topo {
     display: inline-block;
     margin-top: 30px;
     color: #e50914;
@@ -65,7 +66,8 @@
     border-radius: 4px;
     transition: background 0.3s;
   }
-  .btn-voltar:hover {
+  .btn-voltar:hover,
+  .btn-topo:hover {
     background-color: #e50914;
     color: #000;
   }
@@ -78,3 +80,13 @@
     }
   }
 </style>
+
+<script>
+  // Botão voltar ao topo
+  document.querySelectorAll('.btn-topo').forEach(function(btn) {
+    btn.addEventListener('click', function(e) {
+      e.preventDefault();
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  });
+</script>
