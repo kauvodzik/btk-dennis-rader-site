@@ -1,92 +1,182 @@
-<nav class="nav-menu" role="navigation" aria-label="Menu de navegação">
-  <a href="index.html">Resumo</a>
-  <a href="historia_btk.html">História</a>
-  <a href="linha_do_tempo_crimes.html">Linha do Tempo</a>
-  <a href="vitimas_btk.html">Vítimas</a>
-  <a href="referencias_btk.html">Referências</a>
-</nav>
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <title>História - Dennis Rader</title>
+  <style>
+    :root {
+      --bg: #000;
+      --text: #fff;
+      --accent: #e50914;
+      --surface: #111;
+      --font: 'Courier New', monospace;
+    }
 
-<section id="historia" class="historia section">
-  <h2>História</h2>
+    body {
+      background-color: var(--bg);
+      color: var(--text);
+      font-family: var(--font);
+      margin: 0;
+      padding: 0;
+    }
 
-  <p><strong>Dennis Lynn Rader</strong> nasceu em 9 de março de 1945, filho de Dorothea Mae Rader (nascida Cook) e William Elvin Rader, sendo um de quatro filhos. Seus irmãos eram Paul, Bill e Jeff Rader. Nascido em Pittsburg, Kansas, ele cresceu na cidade de Wichita. Seus pais trabalhavam muito e prestavam pouca atenção aos filhos em casa; Rader, mais tarde, lembraria com especificidade o sentimento de ser ignorado por sua mãe e o ressentimento que isso gerou.</p>
+    .nav-menu {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      background-color: var(--surface);
+      padding: 1rem 0;
+      border-bottom: 1px solid #333;
+    }
 
-  <p>Desde muito jovem, Rader nutria várias fantasias sexuais sádicas que envolviam torturar mulheres “presas e indefesas”. Ele também mostrava sinais de zoossadismo ao torturar, matar e enforcar pequenos animais. Rader buscava satisfazer seus fetiches sexuais por voyeurismo, asfixia autoerótica e cross​‑dressing; costumava espionar vizinhas enquanto se vestia com roupas de mulher — incluindo peças íntimas femininas que havia roubado — e então se masturbava com cordas ou outras amarras nos braços e pescoço.</p>
+    .nav-menu a {
+      color: var(--accent);
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 1rem;
+      transition: color 0.3s;
+    }
 
-  <p>Anos mais tarde, durante um período de pausa nos assassinatos, Rader tiraria fotos de si mesmo vestido com roupas de mulher e usando uma máscara feminina, enquanto estava amarrado. Ele admitiria posteriormente que fingia ser suas vítimas como parte de uma fantasia sexual. Apesar de tudo, manteve essas inclinações bem escondidas e era amplamente considerado em sua comunidade como “normal”, “cortês” e “educado”.</p>
+    .nav-menu a:hover {
+      color: #fff;
+    }
 
-  <p>Depois de se formar na escola, Rader estudou na Kansas Wesleyan University, mas tinha notas medíocres e largou a faculdade após um ano. Ingressou na Força Aérea dos Estados Unidos, servindo de 1966 a 1970. Após ser dispensado do serviço ativo, mudou-se para Park City, onde começou a trabalhar no departamento de carnes da rede de supermercados IGA, onde sua mãe trabalhava como escriturária.</p>
-
-  <p>Em 22 de maio de 1971, casou-se com Paula Dietz, com quem teve dois filhos, Kerri e Brian. Depois, estudou na Butler Community College, em El Dorado, Kansas, graduando-se em eletrônica em 1973. Em seguida, matriculou-se na Universidade Estadual de Wichita, formando-se em 1979 com um diploma em administração de justiça.</p>
-
-  <p>Rader trabalhou como montador para a Coleman Company, fabricante de artigos para campismo. Posteriormente, atuou no escritório de Wichita da ADT Inc. entre 1974 e 1988, instalando sistemas de alarmes de segurança — cuja demanda aumentou exponencialmente após o início dos assassinatos do BTK. Em 1989, foi supervisor de campo operacional do censo na área de Wichita, antes do censo federal de 1990.</p>
-
-  <p>Em maio de 1991, tornou-se apanhador de cães e oficial de conformidade em Park City. Nessa função, vizinhos o lembram como excessivamente zeloso e extremamente rígido, demonstrando prazer em intimidar e assediar mulheres solteiras. Uma vizinha afirmou que Rader teria matado seu cachorro sem motivo.</p>
-
-  <p>Rader foi membro da Igreja Luterana de Cristo e chegou a ser eleito presidente do conselho de sua congregação. Também foi líder dos escoteiros mirins do Kansas.</p>
-
-  <p>Em 26 de julho de 2005, após sua prisão, sua esposa solicitou e obteve na justiça um “divórcio de emergência”, que excluiu o período normal de espera e agilizou o processo.</p>
-
-  <p><a href="#" class="btn-topo">Voltar ao topo</a></p>
-</section>
-
-<style>
-  .historia.section {
-    background-color: #000;
-    color: #fff;
-    padding: 50px 80px;
-    font-family: 'Courier New', monospace;
-    line-height: 1.7;
-  }
-  .historia.section h2 {
-    color: #e50914;
-    font-size: 28px;
-    margin-bottom: 20px;
-    border-bottom: 2px solid #e50914;
-    display: inline-block;
-    padding-bottom: 5px;
-  }
-  .historia.section p {
-    margin-bottom: 15px;
-    max-width: 900px;
-  }
-  .historia.section strong {
-    color: #e50914;
-  }
-  .btn-voltar,
-  .btn-topo {
-    display: inline-block;
-    margin-top: 30px;
-    color: #e50914;
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 16px;
-    border: 1px solid #e50914;
-    padding: 8px 14px;
-    border-radius: 4px;
-    transition: background 0.3s;
-  }
-  .btn-voltar:hover,
-  .btn-topo:hover {
-    background-color: #e50914;
-    color: #000;
-  }
-  @media (max-width: 768px) {
     .historia.section {
-      padding: 30px 20px;
+      background-color: #000;
+      color: #fff;
+      padding: 50px 80px;
+      font-family: 'Courier New', monospace;
+      line-height: 1.7;
     }
-    .historia.section h2 {
-      font-size: 24px;
-    }
-  }
-</style>
 
-<script>
-  // Botão voltar ao topo
-  document.querySelectorAll('.btn-topo').forEach(function(btn) {
-    btn.addEventListener('click', function(e) {
-      e.preventDefault();
+    .historia.section h2 {
+      color: var(--accent);
+      font-size: 28px;
+      margin-bottom: 20px;
+      border-bottom: 2px solid var(--accent);
+      display: inline-block;
+      padding-bottom: 5px;
+    }
+
+    .historia.section p {
+      margin-bottom: 15px;
+      max-width: 900px;
+    }
+
+    .historia.section strong {
+      color: var(--accent);
+    }
+
+    .btn-voltar,
+    .btn-topo {
+      display: inline-block;
+      margin-top: 30px;
+      color: var(--accent);
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 16px;
+      border: 1px solid var(--accent);
+      padding: 8px 14px;
+      border-radius: 4px;
+      transition: background 0.3s;
+    }
+
+    .btn-voltar:hover,
+    .btn-topo:hover {
+      background-color: var(--accent);
+      color: #000;
+    }
+
+    #btnTopo {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      z-index: 99;
+      font-size: 24px;
+      border: none;
+      outline: none;
+      background-color: var(--accent);
+      color: white;
+      cursor: pointer;
+      padding: 10px 15px;
+      border-radius: 8px;
+      display: none;
+      font-family: 'Courier New', monospace;
+    }
+
+    #btnTopo:hover {
+      background-color: #ff2e2e;
+    }
+
+    @media (max-width: 768px) {
+      .historia.section {
+        padding: 30px 20px;
+      }
+
+      .historia.section h2 {
+        font-size: 24px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- MENU SUPERIOR -->
+  <nav class="nav-menu" role="navigation" aria-label="Menu de navegação">
+    <a href="navegaçao_btk.html">Resumo</a>
+    <a href="historia_btk.html">História</a>
+    <a href="linha_do_tempo_crimes.html">Linha do Tempo</a>
+    <a href="vitimas_btk.html">Vítimas</a>
+    <a href="referencias_btk.html">Referências</a>
+  </nav>
+
+  <!-- CONTEÚDO -->
+  <section id="historia" class="historia section">
+    <h2>História</h2>
+
+    <p><strong>Dennis Lynn Rader</strong> nasceu em 9 de março de 1945, filho de Dorothea Mae Rader (nascida Cook) e William Elvin Rader, sendo um de quatro filhos. Seus irmãos eram Paul, Bill e Jeff Rader. Nascido em Pittsburg, Kansas, ele cresceu na cidade de Wichita. Seus pais trabalhavam muito e prestavam pouca atenção aos filhos em casa; Rader, mais tarde, lembraria com especificidade o sentimento de ser ignorado por sua mãe e o ressentimento que isso gerou.</p>
+
+    <p>Desde muito jovem, Rader nutria várias fantasias sexuais sádicas que envolviam torturar mulheres “presas e indefesas”. Ele também mostrava sinais de zoossadismo ao torturar, matar e enforcar pequenos animais. Rader buscava satisfazer seus fetiches sexuais por voyeurismo, asfixia autoerótica e cross​‑dressing; costumava espionar vizinhas enquanto se vestia com roupas de mulher — incluindo peças íntimas femininas que havia roubado — e então se masturbava com cordas ou outras amarras nos braços e pescoço.</p>
+
+    <p>Anos mais tarde, durante um período de pausa nos assassinatos, Rader tiraria fotos de si mesmo vestido com roupas de mulher e usando uma máscara feminina, enquanto estava amarrado. Ele admitiria posteriormente que fingia ser suas vítimas como parte de uma fantasia sexual. Apesar de tudo, manteve essas inclinações bem escondidas e era amplamente considerado em sua comunidade como “normal”, “cortês” e “educado”.</p>
+
+    <p>Depois de se formar na escola, Rader estudou na Kansas Wesleyan University, mas tinha notas medíocres e largou a faculdade após um ano. Ingressou na Força Aérea dos Estados Unidos, servindo de 1966 a 1970. Após ser dispensado do serviço ativo, mudou-se para Park City, onde começou a trabalhar no departamento de carnes da rede de supermercados IGA, onde sua mãe trabalhava como escriturária.</p>
+
+    <p>Em 22 de maio de 1971, casou-se com Paula Dietz, com quem teve dois filhos, Kerri e Brian. Depois, estudou na Butler Community College, em El Dorado, Kansas, graduando-se em eletrônica em 1973. Em seguida, matriculou-se na Universidade Estadual de Wichita, formando-se em 1979 com um diploma em administração de justiça.</p>
+
+    <p>Rader trabalhou como montador para a Coleman Company, fabricante de artigos para campismo. Posteriormente, atuou no escritório de Wichita da ADT Inc. entre 1974 e 1988, instalando sistemas de alarmes de segurança — cuja demanda aumentou exponencialmente após o início dos assassinatos do BTK. Em 1989, foi supervisor de campo operacional do censo na área de Wichita, antes do censo federal de 1990.</p>
+
+    <p>Em maio de 1991, tornou-se apanhador de cães e oficial de conformidade em Park City. Nessa função, vizinhos o lembram como excessivamente zeloso e extremamente rígido, demonstrando prazer em intimidar e assediar mulheres solteiras. Uma vizinha afirmou que Rader teria matado seu cachorro sem motivo.</p>
+
+    <p>Rader foi membro da Igreja Luterana de Cristo e chegou a ser eleito presidente do conselho de sua congregação. Também foi líder dos escoteiros mirins do Kansas.</p>
+
+    <p>Em 26 de julho de 2005, após sua prisão, sua esposa solicitou e obteve na justiça um “divórcio de emergência”, que excluiu o período normal de espera e agilizou o processo.</p>
+
+    <p><a href="#" class="btn-topo">Voltar ao topo</a></p>
+  </section>
+
+  <!-- Botão flutuante -->
+  <button onclick="scrollToTop()" id="btnTopo" title="Voltar ao topo">↑</button>
+
+  <script>
+    // Mostrar botão ao rolar
+    window.onscroll = function () {
+      document.getElementById("btnTopo").style.display = window.scrollY > 200 ? "block" : "none";
+    };
+
+    // Rolar suavemente pro topo
+    function scrollToTop() {
       window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    // Links "voltar ao topo"
+    document.querySelectorAll('.btn-topo').forEach(function(btn) {
+      btn.addEventListener('click', function(e) {
+        e.preventDefault();
+        scrollToTop();
+      });
     });
-  });
-</script>
+  </script>
+
+</body>
+</html>

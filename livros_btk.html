@@ -1,149 +1,162 @@
-<nav class="nav-menu" role="navigation" aria-label="Menu de navegação">
-  <a href="index.html">Resumo</a>
-  <a href="historia_btk.html">História</a>
-  <a href="linha_do_tempo_crimes.html">Linha do Tempo</a>
-  <a href="vitimas_btk.html">Vítimas</a>
-  <a href="referencias_btk.html">Referências</a>
-</nav>
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Livros - Caso BTK</title>
+  <style>
+    body {
+      margin: 0;
+      background-color: #000;
+      font-family: 'Courier New', monospace;
+      color: #fff;
+    }
 
-<section id="livros">
-  <h2>Livros sobre o caso BTK</h2>
+    .nav-menu {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      background-color: #111;
+      padding: 1rem 0;
+      border-bottom: 1px solid #333;
+    }
 
-  <div class="livro-card">
-    <img src="download (2).jpg" alt="Capa do livro Confession of a Serial Killer" />
-    <div class="livro-info">
-      <h3>Confession of a Serial Killer</h3>
-      <p><strong>Autora:</strong> Katherine Ramsland</p>
-      <p>Com acesso direto a Dennis Rader, a autora explora as profundezas da mente do assassino, revelando sua infância perturbada, as fantasias que o impulsionavam e o seu desejo de reconhecimento.</p>
+    .nav-menu a {
+      color: #e50914;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 1rem;
+      transition: color 0.3s;
+    }
+
+    .nav-menu a:hover {
+      color: #fff;
+    }
+
+    #livros {
+      background-color: #000;
+      color: #fff;
+      padding: 40px 20px;
+    }
+
+    #livros h2 {
+      color: #e50914;
+      font-size: 28px;
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    .livro-card {
+      display: flex;
+      gap: 20px;
+      background-color: #111;
+      padding: 20px;
+      margin-bottom: 30px;
+      border-radius: 8px;
+      align-items: flex-start;
+    }
+
+    .livro-card img {
+      width: 150px;
+      height: auto;
+      border-radius: 4px;
+      object-fit: cover;
+    }
+
+    .livro-info h3 {
+      color: #e50914;
+      margin-top: 0;
+    }
+
+    .livro-info p {
+      margin: 5px 0;
+      color: #ccc;
+    }
+
+    #btnTopo {
+      position: fixed;
+      bottom: 30px;
+      left: 30px;
+      z-index: 99;
+      font-size: 16px;
+      border: 1px solid #e50914;
+      background-color: transparent;
+      color: #e50914;
+      font-weight: bold;
+      cursor: pointer;
+      padding: 8px 14px;
+      border-radius: 4px;
+      display: none;
+      transition: 0.3s;
+    }
+
+    #btnTopo:hover {
+      background-color: #e50914;
+      color: black;
+    }
+
+    @media (max-width: 768px) {
+      .livro-card {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+
+      .livro-card img {
+        margin-bottom: 15px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <a id="topo"></a>
+
+  <nav class="nav-menu" role="navigation" aria-label="Menu de navegação">
+    <a href="navegaçao_btk.html">Resumo</a>
+    <a href="historia_btk.html">História</a>
+    <a href="linha_do_tempo_crimes.html">Linha do Tempo</a>
+    <a href="vitimas_btk.html">Vítimas</a>
+    <a href="referencias_btk.html">Referências</a>
+    <a href="livros_btk.html">Livros</a>
+  </nav>
+
+  <section id="livros">
+    <h2>Livros sobre o caso BTK</h2>
+
+    <div class="livro-card">
+      <img src="download (2).jpg" alt="Capa do livro Confession of a Serial Killer" />
+      <div class="livro-info">
+        <h3>Confession of a Serial Killer</h3>
+        <p><strong>Autora:</strong> Katherine Ramsland</p>
+        <p>Com acesso direto a Dennis Rader, a autora explora as profundezas da mente do assassino, revelando sua infância perturbada, as fantasias que o impulsionavam e o seu desejo de reconhecimento.</p>
+      </div>
     </div>
-  </div>
 
-  <div class="livro-card">
-    <img src="download.png" alt="Capa do livro Bind, Torture, Kill: The Inside Story" />
-    <div class="livro-info">
-      <h3>Bind, Torture, Kill: The Inside Story</h3>
-      <p><strong>Autores:</strong> Roy Wenzl, Tim Potter, Hurst Laviana e L. Kelly</p>
-      <p>Relato jornalístico completo sobre os crimes, a investigação e a captura de Dennis Rader. Escrito por jornalistas que acompanharam o caso de perto.</p>
+    <div class="livro-card">
+      <img src="download.png" alt="Capa do livro Bind, Torture, Kill: The Inside Story" />
+      <div class="livro-info">
+        <h3>Bind, Torture, Kill: The Inside Story</h3>
+        <p><strong>Autores:</strong> Roy Wenzl, Tim Potter, Hurst Laviana e L. Kelly</p>
+        <p>Relato jornalístico completo sobre os crimes, a investigação e a captura de Dennis Rader. Escrito por jornalistas que acompanharam o caso de perto.</p>
+      </div>
     </div>
-  </div>
 
-  <p><a href="index.html" class="btn-voltar">← Voltar ao início</a></p>
-</section>
+    <!-- Espaço extra pra garantir rolagem -->
+    <div style="height: 200px;"></div>
+  </section>
 
-<!-- Botão de Voltar ao Topo -->
-<button onclick="scrollToTop()" id="btnTopo" title="Voltar ao topo">↑</button>
+  <button onclick="scrollToTop()" id="btnTopo" title="Voltar ao topo">← Voltar ao topo</button>
 
-<style>
-#livros {
-  background-color: #000;
-  color: #fff;
-  padding: 40px 20px;
-  font-family: 'Courier New', monospace;
-}
+  <script>
+    window.onscroll = function () {
+      const botao = document.getElementById("btnTopo");
+      botao.style.display = window.scrollY > 200 ? "block" : "none";
+    };
 
-#livros h2 {
-  color: #e50914;
-  font-size: 28px;
-  text-align: center;
-  margin-bottom: 40px;
-}
-
-.livro-card {
-  display: flex;
-  gap: 20px;
-  background-color: #111;
-  padding: 20px;
-  margin-bottom: 30px;
-  border-radius: 8px;
-  align-items: flex-start;
-}
-
-.livro-card img {
-  width: 150px;
-  height: auto;
-  border-radius: 4px;
-  object-fit: cover;
-}
-
-.livro-info h3 {
-  color: #e50914;
-  margin-top: 0;
-}
-
-.livro-info p {
-  margin: 5px 0;
-  color: #ccc;
-}
-
-.btn-voltar {
-  display: inline-block;
-  margin-top: 30px;
-  color: #e50914;
-  text-decoration: none;
-  font-weight: bold;
-  font-size: 16px;
-  border: 1px solid #e50914;
-  padding: 8px 14px;
-  border-radius: 4px;
-  transition: background 0.3s;
-}
-
-.btn-voltar:hover {
-  background-color: #e50914;
-  color: #000;
-}
-
-#btnTopo {
-  position: fixed;
-  bottom: 30px;
-  right: 30px;
-  z-index: 99;
-  font-size: 24px;
-  border: none;
-  outline: none;
-  background-color: #e50914;
-  color: white;
-  cursor: pointer;
-  padding: 10px 15px;
-  border-radius: 8px;
-  display: none;
-  font-family: 'Courier New', monospace;
-}
-
-#btnTopo:hover {
-  background-color: #ff2e2e;
-}
-
-@media (max-width: 768px) {
-  .livro-card {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
-
-  .livro-card img {
-    margin-bottom: 15px;
-  }
-}
-</style>
-
-<script>
-  window.onscroll = function () {
-    document.getElementById("btnTopo").style.display = window.scrollY > 200 ? "block" : "none";
-  };
-
-  function scrollToTop() {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  }
-</script>
-</style>
-
-<script>
-  // Botão voltar ao topo
-  document.querySelectorAll('.btn-topo').forEach(function(btn) {
-    btn.addEventListener('click', function(e) {
-      e.preventDefault();
+    function scrollToTop() {
       window.scrollTo({ top: 0, behavior: 'smooth' });
-    });
-  });
-</script>
+    }
+  </script>
+
+</body>
+</html>

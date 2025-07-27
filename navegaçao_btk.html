@@ -1,177 +1,224 @@
-<!-- ===================== PARTE 2 – TOC + INFOBOX ===================== -->
-<style>
-  :root {
-    --bg: #000;
-    --text: #fff;
-    --accent: #e53935;
-    --surface: #111;
-    --border: #333;
-    --font: 'Courier New', monospace;
-    --max-width: 1100px;
-  }
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Resumo - Dennis Rader</title>
+  <style>
+    :root {
+      --bg: #000;
+      --text: #fff;
+      --accent: #e53935;
+      --surface: #111;
+      --border: #333;
+      --font: 'Courier New', monospace;
+      --max-width: 1100px;
+    }
 
-  body {
-    background: var(--bg);
-    color: var(--text);
-    font-family: var(--font);
-    line-height: 1.6;
-    margin: 0;
-    padding: 0;
-  }
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: var(--font);
+      line-height: 1.6;
+      margin: 0;
+      padding: 0;
+    }
 
-  .container {
-    max-width: var(--max-width);
-    margin: 0 auto;
-    padding: 0 1rem 2rem;
-  }
+    .nav-menu {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      background-color: var(--surface);
+      padding: 1rem 0;
+      border-bottom: 1px solid var(--border);
+    }
 
-  nav.toc {
-    background: var(--surface);
-    border: 1px solid var(--border);
-    padding: 1rem;
-    margin: 2rem auto;
-    max-width: var(--max-width);
-  }
+    .nav-menu a {
+      color: var(--accent);
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 1rem;
+      transition: color 0.3s;
+    }
 
-  nav.toc ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1rem 1.5rem;
-  }
+    .nav-menu a:hover {
+      color: #fff;
+    }
 
-  nav.toc a {
-    color: var(--accent);
-    text-decoration: none;
-    font-weight: bold;
-    position: relative;
-  }
+    nav.toc {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      padding: 1rem;
+      margin: 2rem auto;
+      max-width: var(--max-width);
+    }
 
-  nav.toc a::after {
-    content: '';
-    display: block;
-    width: 0%;
-    height: 2px;
-    background: var(--accent);
-    transition: 0.3s;
-    position: absolute;
-    bottom: -4px;
-    left: 0;
-  }
+    nav.toc ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem 1.5rem;
+    }
 
-  nav.toc a:hover::after {
-    width: 100%;
-  }
+    nav.toc a {
+      color: var(--accent);
+      text-decoration: none;
+      font-weight: bold;
+      position: relative;
+    }
 
-  .article-layout {
-    display: grid;
-    grid-template-columns: 1fr 300px;
-    gap: 2rem;
-    max-width: var(--max-width);
-    margin: 0 auto;
-    padding: 0 1rem 3rem;
-  }
-
-  .infobox {
-    background: var(--surface);
-    border: 1px solid var(--border);
-    padding: 1rem;
-    align-self: start;
-    position: sticky;
-    top: 1rem;
-  }
-
-  .infobox h2 {
-    color: var(--accent);
-    font-size: 1.25rem;
-    border-bottom: 1px solid var(--accent);
-    padding-bottom: 0.5rem;
-    margin-top: 0;
-  }
-
-  .infobox img {
-    width: 100%;
-    height: auto;
-    margin-bottom: 1rem;
-    border: 1px solid var(--border);
-    display: block;
-  }
-
-  .infobox dl {
-    margin: 0;
-  }
-
-  .infobox dt {
-    font-weight: bold;
-    margin-top: 0.5rem;
-  }
-
-  .infobox dd {
-    margin: 0 0 0.5rem 0;
-  }
-
-  @media (max-width: 900px) {
-    .article-layout {
+    nav.toc a::after {
+      content: '';
       display: block;
+      width: 0%;
+      height: 2px;
+      background: var(--accent);
+      transition: 0.3s;
+      position: absolute;
+      bottom: -4px;
+      left: 0;
+    }
+
+    nav.toc a:hover::after {
+      width: 100%;
+    }
+
+    .article-layout {
+      display: grid;
+      grid-template-columns: 1fr 300px;
+      gap: 2rem;
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 0 1rem 3rem;
     }
 
     .infobox {
-      position: static;
-      margin-top: 2rem;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      padding: 1rem;
+      align-self: start;
+      position: sticky;
+      top: 1rem;
     }
-  }
-</style>
 
-<!-- TOC -->
-<nav class="toc" aria-label="Navegação do artigo">
-  <ul>
-    <li><a href="#resumo">Resumo</a></li>
-    <li><a href="#historia">História</a></li>
-    <li><a href="#linha-do-tempo">Linha do tempo</a></li>
-    <li><a href="#vitimas">Vítimas</a></li>
-    <li><a href="#livros">Livros</a></li>
-    <li><a href="#referencias">Referências</a></li>
-  </ul>
-</nav>
+    .infobox h2 {
+      color: var(--accent);
+      font-size: 1.25rem;
+      border-bottom: 1px solid var(--accent);
+      padding-bottom: 0.5rem;
+      margin-top: 0;
+    }
 
-<!-- Conteúdo + Infobox -->
-<main id="conteudo" role="main" class="article-layout">
-  <article>
-    <section id="resumo" aria-labelledby="resumo-titulo">
-      <h2 id="resumo-titulo">Resumo</h2>
-      <p>
-        <strong>Dennis Rader</strong>, mais conhecido como <strong>BTK</strong> (sigla para <em>Bind, Torture, Kill</em>), foi um dos serial killers mais temidos dos Estados Unidos. Atuando entre 1974 e 1991, Rader aterrorizou a cidade de Wichita, no Kansas, com assassinatos meticulosamente planejados. Ele enviava cartas à polícia e à mídia detalhando seus crimes, numa tentativa constante de exercer controle e obter reconhecimento público.
-      </p>
-      <p>
-        Após mais de 30 anos sem ser identificado, Rader foi capturado em 2005 graças a evidências digitais deixadas em um disquete que ele mesmo enviou à polícia. Condenado por 10 assassinatos, cumpre atualmente 10 penas de prisão perpétua consecutivas. Esta página reúne sua trajetória, a lista de vítimas, uma linha do tempo dos crimes e o impacto cultural deixado pelo caso.
-      </p>
-    </section>
-  </article>
+    .infobox img {
+      width: 100%;
+      height: auto;
+      margin-bottom: 1rem;
+      border: 1px solid var(--border);
+      display: block;
+    }
 
-  <aside class="infobox" role="complementary" aria-label="Informações sobre Dennis Rader">
-    <h2>Dennis Rader</h2>
-    <img src="923CB3FA-55B4-42E4-83F31E0673E8B3ED.webp" alt="Dennis Rader algemado, vestindo macacão vermelho, cercado por grandes máscaras brancas com marcas de sangue.">
-    <dl>
-      <dt>Nome completo</dt><dd>Dennis Lynn Rader</dd>
-      <dt>Nascimento</dt><dd>9 de março de 1945</dd>
-      <dt>Apelido</dt><dd>BTK (Bind, Torture, Kill)</dd>
-      <dt>Local</dt><dd>Pittsburg, Kansas, EUA</dd>
-      <dt>Prisão</dt><dd>25 de fevereiro de 2005</dd>
-      <dt>Condenação</dt><dd>10 homicídios</dd>
-      <dt>Pena</dt><dd>10 prisões perpétuas</dd>
-    </dl>
-  </aside>
+    .infobox dl {
+      margin: 0;
+    }
+
+    .infobox dt {
+      font-weight: bold;
+      margin-top: 0.5rem;
+    }
+
+    .infobox dd {
+      margin: 0 0 0.5rem 0;
+    }
+
+    #btnTopo {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      z-index: 99;
+      font-size: 24px;
+      border: none;
+      outline: none;
+      background-color: var(--accent);
+      color: white;
+      cursor: pointer;
+      padding: 10px 15px;
+      border-radius: 8px;
+      display: none;
+    }
+
+    #btnTopo:hover {
+      background-color: #ff2e2e;
+    }
+
+    @media (max-width: 900px) {
+      .article-layout {
+        display: block;
+      }
+
+      .infobox {
+        position: static;
+        margin-top: 2rem;
+      }
+    }
   </style>
+</head>
+<body>
 
-<script>
-  // Botão voltar ao topo
-  document.querySelectorAll('.btn-topo').forEach(function(btn) {
-    btn.addEventListener('click', function(e) {
-      e.preventDefault();
+  <!-- Menu principal do site -->
+  <nav class="nav-menu" role="navigation" aria-label="Menu de navegação">
+    <a href="index.html">Resumo</a>
+    <a href="historia_btk.html">História</a>
+    <a href="linha_do_tempo_crimes.html">Linha do Tempo</a>
+    <a href="vitimas_btk.html">Vítimas</a>
+    <a href="referencias_btk.html">Referências</a>
+    <a href="livros_btk.html">Livros</a>
+  </nav>
+
+  
+  
+  <!-- Conteúdo principal -->
+  <main id="conteudo" role="main" class="article-layout">
+    <article>
+      <section id="resumo" aria-labelledby="resumo-titulo">
+        <h2 id="resumo-titulo">Resumo</h2>
+        <p>
+          <strong>Dennis Rader</strong>, mais conhecido como <strong>BTK</strong> (sigla para <em>Bind, Torture, Kill</em>), foi um dos serial killers mais temidos dos Estados Unidos. Atuando entre 1974 e 1991, Rader aterrorizou a cidade de Wichita, no Kansas, com assassinatos meticulosamente planejados. Ele enviava cartas à polícia e à mídia detalhando seus crimes, numa tentativa constante de exercer controle e obter reconhecimento público.
+        </p>
+        <p>
+          Após mais de 30 anos sem ser identificado, Rader foi capturado em 2005 graças a evidências digitais deixadas em um disquete que ele mesmo enviou à polícia. Condenado por 10 assassinatos, cumpre atualmente 10 penas de prisão perpétua consecutivas. Esta página reúne sua trajetória, a lista de vítimas, uma linha do tempo dos crimes e o impacto cultural deixado pelo caso.
+        </p>
+      </section>
+    </article>
+
+    <!-- Info lateral -->
+    <aside class="infobox" role="complementary" aria-label="Informações sobre Dennis Rader">
+      <h2>Dennis Rader</h2>
+      <img src="923CB3FA-55B4-42E4-83F31E0673E8B3ED.webp" alt="Dennis Rader algemado, vestindo macacão vermelho, cercado por grandes máscaras brancas com marcas de sangue.">
+      <dl>
+        <dt>Nome completo</dt><dd>Dennis Lynn Rader</dd>
+        <dt>Nascimento</dt><dd>9 de março de 1945</dd>
+        <dt>Apelido</dt><dd>BTK (Bind, Torture, Kill)</dd>
+        <dt>Local</dt><dd>Pittsburg, Kansas, EUA</dd>
+        <dt>Prisão</dt><dd>25 de fevereiro de 2005</dd>
+        <dt>Condenação</dt><dd>10 homicídios</dd>
+        <dt>Pena</dt><dd>10 prisões perpétuas</dd>
+      </dl>
+    </aside>
+  </main>
+
+  <!-- Botão de Voltar ao Topo -->
+  <button onclick="scrollToTop()" id="btnTopo" title="Voltar ao topo">↑</button>
+
+  <script>
+    window.onscroll = function () {
+      document.getElementById("btnTopo").style.display = window.scrollY > 200 ? "block" : "none";
+    };
+
+    function scrollToTop() {
       window.scrollTo({ top: 0, behavior: 'smooth' });
-    });
-  });
-</script>
-</main>
+    }
+  </script>
+
+</body>
+</html>
